@@ -1,0 +1,34 @@
+/*==================================
+=            CAL STYLES            =
+==================================*/
+body {
+    text-align: center;
+    width: 100%;
+}
+
+#main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.day {
+    $dayPad: 1.5em;
+
+    font-size: 1rem;
+    text-align: center;
+    line-height: $dayPad;
+
+    border: 1px solid red;
+    display: inline-block;
+    width: $dayPad;
+    height: $dayPad;
+
+    &.today {
+        color: white;
+        background: red;
+    }
+}
+
+
+/*-----  End of CAL STYLES  ------*/
+

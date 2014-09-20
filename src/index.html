@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Minimal Calendar</title>
+    <meta name="description" content="Minimal Calendar">
+    <meta name="viewport" content="width=device-width">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en" rel="stylesheet">
+
+    <!-- This is <%- env %>. -->
+
+    <!-- Load css via grunt template -->
+    <link rel="stylesheet" href="<%= css %>">
+
+    <!-- Load head scripts via grunt template -->
+    <%= jshead %>
+
+</head>
+
+<body data-env="<%- env %>">
+    <div id="main">
+        <h1><span id="month"></span><span id="year"></span></h1>
+        <div id="daynames"></div>
+        <div id="days"></div>        
+    </div>
+
+    <!-- Load foot scripts via grunt template -->
+    <%= jsfoot %>
+</body>
+
+</html>

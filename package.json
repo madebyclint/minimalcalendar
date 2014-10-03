@@ -2,7 +2,7 @@
   "name": "generateUrl",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt-contrib-sass": "^0.8.1"
+    "grunt-contrib-sass": "~0.8.1"
   },
   "dependencies": {
     "grunt": "~0.4.5",

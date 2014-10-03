@@ -18,6 +18,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-template');
 
+    var reloadrScript = '<script>' + 
+        'Reloadr.go([' +
+        '   "js/build.js",' +
+        '   "styles/app.css",' +
+        '   "index.html"' +
+        ']);' +
+        '</script>';
+
     // Create array of all javascript files
     var generateScriptTag = function(relativeSrc) {
         var scriptArr = grunt.file.expand({cwd: 'src/' + relativeSrc}, '*.js'),
@@ -25,6 +33,7 @@ module.exports = function (grunt) {
         for(var i = 0, len = scriptArr.length; i < len; i++) {
             scriptReturn += ('<script type="text/javascript" src="' + relativeSrc + '/' + scriptArr[i] + '"></script>\n\t');
         }
+        scriptReturn += reloadrScript;
         return scriptReturn;
     };
 
